@@ -220,4 +220,173 @@ public class TasksTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void sum28(){
+        int [] a = {2,2,2,2};
+        boolean expected = true;
+
+        boolean result = Tasks.sum28(a);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void sum28Empty(){
+        int [] a = {};
+        boolean expected = false;
+
+        boolean result = Tasks.sum28(a);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void sum28NotEigth(){
+        int [] a = {2,4,5,6,2,1,4,6,4,8};
+        boolean expected = false;
+
+        boolean result = Tasks.sum28(a);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void sum28OneDigit(){
+        int [] a = {2};
+        boolean expected = false;
+
+        boolean result = Tasks.sum28(a);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void sum13(){
+        int [] a = {13,1,13,4,5,6,9};
+        int expected = 20;
+
+        int result = Tasks.sum13(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void sum13Empty(){
+        int [] a = {};
+        int expected = 0;
+
+        int result = Tasks.sum13(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void sum13Double13(){
+        int [] a = {13,1,13};
+        int expected = 0;
+
+        int result = Tasks.sum13(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void has22(){
+        int [] a = {1,2,2,2,2,3,4,9};
+        boolean expected = true;
+
+        boolean result = Tasks.has22(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void has22Empty(){
+        int [] a = {};
+        boolean expected = false;
+
+        boolean result = Tasks.has22(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void has22Only2(){
+        int [] a = {2,2};
+        boolean expected = true;
+
+        boolean result = Tasks.has22(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void fizzArray(){
+        int n = 3;
+        int [] expected = {0,1,2};
+
+        int [] result = Tasks.fizzArray(n);
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void fizzArrayEmpty(){
+        int n = 0;
+        int [] expected = {};
+
+        int [] result = Tasks.fizzArray(n);
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void fizzArrayZeroValue(){
+        int n = 0;
+        int [] expected = {};
+
+        int [] result = Tasks.fizzArray(n);
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void fizzArrayOneValue(){
+        int n = 1;
+        int [] expected = {0};
+
+        int [] result = Tasks.fizzArray(n);
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void centeredAverage(){
+        int [] a = {1,2,3,4,5};
+        int expected = 3;
+
+        int result = Tasks.centeredAverage(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void centeredAverageTheSame(){
+        int [] a = {9,9,9};
+        int expected = 9;
+
+        int result = Tasks.centeredAverage(a);
+
+        assertEquals(expected,result);
+    }
+
+    @Test
+    public void centeredAverageSameMaxMin(){
+        int [] a = {1,99,1,99};
+        int expected = 50;
+
+        int result = Tasks.centeredAverage(a);
+
+        assertEquals(expected,result);
+    }
 }
