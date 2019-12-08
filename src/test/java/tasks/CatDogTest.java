@@ -49,7 +49,7 @@ public class CatDogTest {
     public void catDogNull() {
         //Given
         String a = null;
-        //Then
+        //When
         boolean result = Tasks.catDog(a);
     }
 }

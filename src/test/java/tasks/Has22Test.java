@@ -2,42 +2,45 @@ package tasks;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class Has22Test {
     @Test
     public void has22() {
+        //Given
         int[] a = {1, 2, 2, 2, 2, 3, 4, 9};
-        boolean expected = true;
-
+        //When
         boolean result = Tasks.has22(a);
-
-        assertEquals(expected, result);
+        //Then
+        assertTrue(result);
     }
 
     @Test
     public void has22Empty() {
+        //Given
         int[] a = {};
-        boolean expected = false;
-
+        //When
         boolean result = Tasks.has22(a);
-
-        assertEquals(expected, result);
+        //Then
+        assertFalse(result);
     }
 
     @Test
     public void has22Only2() {
+        //Given
         int[] a = {2, 2};
-        boolean expected = true;
-
+        //When
         boolean result = Tasks.has22(a);
-
-        assertEquals(expected, result);
+        //Then
+        assertTrue(result);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void has22Null() {
+        //Given
         int[] nums = null;
+        //When
         Tasks.centeredAverage(nums);
     }
 }

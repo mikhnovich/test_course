@@ -50,7 +50,7 @@ public class BobThereTest {
     public void bobThereNull() {
         //Given
         String a = null;
-        //Then
+        //When
         boolean result = Tasks.bobThere(a);
     }
 }
