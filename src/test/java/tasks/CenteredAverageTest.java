@@ -40,6 +40,17 @@ public class CenteredAverageTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void centeredAverageEmptyArray() {
+        //Given
+        int[] a = {};
+        int expected = 0;
+        //When
+        int result = Tasks.centeredAverage(a);
+        //Then
+        assertEquals(expected, result);
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void centeredAverageNull() {
         //Given
